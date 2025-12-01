@@ -1,26 +1,20 @@
-import command.Light;
-import command.LightOffCommand;
-import command.LightOnCommand;
-import command.RemoteControl;
-import decorator.Beverage;
-import decorator.HouseBlend;
-import decorator.condiments.Milk;
-import decorator.condiments.Mocha;
-import iterator.Iterator;
-import iterator.NameCollection;
-import iterator.Tree;
-
-import java.util.TreeSet;
+import factory.Pizza;
+import factory.PizzaFactoryNY;
 
 
 public class Main {
     public static void main(String[] args) {
+        //Factory pattern demo
+        String type = "CHEESE";
+        PizzaFactoryNY pizzaFactory = new PizzaFactoryNY();
+        Pizza pizza = pizzaFactory.createPizza(type);
+
         //Decorator pattern demo
-        Beverage beverage = new HouseBlend();
-        beverage = new Mocha(beverage);
-        beverage = new Milk(beverage);
-        beverage = new Mocha(beverage);
-        System.out.println(beverage.getDescription());
+//        Beverage beverage = new HouseBlend();
+//        beverage = new Mocha(beverage);
+//        beverage = new Milk(beverage);
+//        beverage = new Mocha(beverage);
+//        System.out.println(beverage.getDescription());
 
 
         //Command pattern demo
