@@ -1,13 +1,17 @@
 import factory.Pizza;
 import factory.PizzaFactoryNY;
+import template.DiamondMiner;
+import template.Miner;
 
 
 public class Main {
     public static void main(String[] args) {
+        //Template pattern demo
+        Miner diamondMiner = new DiamondMiner();
         //Factory pattern demo
-        String type = "CHEESE";
-        PizzaFactoryNY pizzaFactory = new PizzaFactoryNY();
-        Pizza pizza = pizzaFactory.createPizza(type);
+//        String type = "CHEESE";
+//        PizzaFactoryNY pizzaFactory = new PizzaFactoryNY();
+//        Pizza pizza = pizzaFactory.createPizza(type);
 
         //Decorator pattern demo
 //        Beverage beverage = new HouseBlend();
