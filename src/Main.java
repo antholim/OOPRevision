@@ -1,13 +1,23 @@
+import enums.DiscountType;
 import factory.Pizza;
 import factory.PizzaFactoryNY;
+import state.Phone;
 import template.DiamondMiner;
 import template.Miner;
 
 
 public class Main {
     public static void main(String[] args) {
+        // State design pattern
+        Phone phone = new Phone();
+        phone.nextState();
+        phone.nextState();
+        phone.nextState();
+        phone.nextState();
+        phone.nextState();
+        phone.nextState();
         //Template pattern demo
-        Miner diamondMiner = new DiamondMiner();
+//        Miner diamondMiner = new DiamondMiner();
         //Factory pattern demo
 //        String type = "CHEESE";
 //        PizzaFactoryNY pizzaFactory = new PizzaFactoryNY();
